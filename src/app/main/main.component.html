@@ -1,6 +1,6 @@
 <div class="main-wrapper" fxLayout="column" fxLayoutAlign="start center">
   <mat-form-field appearance="standard" >
-    <input matInput #searchInput type="text" (keyup)="onSearchValueChanges(searchInput)"  placeholder="Szukaj">
+    <input matInput #searchInput type="text" [formControl]="searchForm" (keyup)="onSearchValueChanges(searchInput)"  placeholder="Szukaj">
     <mat-icon matSuffix svgIcon="search" class="search-icon" ></mat-icon>
   </mat-form-field>
 

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Planet, dummyData } from '../dummy';
+import { HttpClient } from '@angular/common/http';
 
 interface Item{
   id:string;
@@ -13,7 +14,7 @@ export class MainService {
 
   public list: Planet[];
 
-constructor() {
+constructor(private _httpClient: HttpClient) {
   this.list = dummyData.results;
 
 }

@@ -9,6 +9,7 @@ import { MainComponent } from './main/main.component'
 import { Routes, RouterModule } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { ListComponent } from './list/list.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -31,7 +32,7 @@ const routes: Routes = [
       BrowserModule,
       BrowserAnimationsModule,
       HttpClientModule,
-
+      ReactiveFormsModule,
       //Angular Material Modules
       MatFormFieldModule,
       MatIconModule,
