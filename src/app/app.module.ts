@@ -1,9 +1,10 @@
 import { BrowserModule, DomSanitizer } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule  } from '@angular/platform-browser/animations';
-import { MatIconModule, MatInputModule, MatIconRegistry} from '@angular/material'
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatFormFieldModule } from '@angular/material';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { AppComponent } from './app.component';
 import { MainComponent } from './main/main.component'
 import { Routes, RouterModule } from '@angular/router';
