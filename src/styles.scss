@@ -1,7 +1,15 @@
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 /* You can add global styles to this file, and also import other style files */
-body{
-  padding:0px;
-  margin:0px;
-  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(172,139,173,1) 83%, rgba(172,139,173,1) 100%);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  background: lightgrey;
+  font-family: 'Montserrat',
+    sans-serif;
 }

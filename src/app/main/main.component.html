@@ -1,10 +1,21 @@
 <div class="main-wrapper" fxLayout="column" fxLayoutAlign="start center">
-  <mat-form-field appearance="standard" >
-    <input matInput #searchInput type="text" [formControl]="searchForm" (keyup)="onSearchValueChanges(searchInput)"  placeholder="Szukaj">
-    <mat-icon matSuffix svgIcon="search" class="search-icon" ></mat-icon>
+  <mat-form-field appearance="standard">
+    <div class="lds-dual-ring" [ngClass]="{ active: getActiveStatus() }"></div>
+    <input
+      matInput
+      #searchInput
+      type="text"
+      [formControl]="searchForm"
+      placeholder="Szukaj"
+    />
+    <mat-icon matSuffix svgIcon="search" class="search-icon"></mat-icon>
   </mat-form-field>
 
-    <app-list [planetsList]="list"></app-list>
-
-
+  <app-list
+    [planetsList]="list"
+    [previous]="previousUrl"
+    [next]="nextUrl"
+    (eventChangePage)="changePage($event)"
+  >
+  </app-list>
 </div>

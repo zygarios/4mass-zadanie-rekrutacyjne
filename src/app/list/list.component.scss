@@ -1,5 +1,73 @@
-:host{
-  .main-wrapper{
-    width:80%;
+:host {
+  .main-wrapper {
+    width: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 10px;
+    padding: 0 20px;
+
+    @media (min-width: 768px) {
+      font-size: 14px;
+    }
   }
+
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 30px 0;
+    overflow: scroll;
+
+    tr {
+      border: 1px solid rgba(green, .2);
+      transition: background .15s;
+
+      &:hover {
+        background: rgba(green, .2);
+      }
+    }
+
+    th,
+    td {
+      padding: 8px 10px;
+
+      @media (min-width: 768px) {
+        padding: 15px 20px;
+      }
+    }
+
+    th {
+      font-weight: 400;
+      text-transform: uppercase;
+      background: green;
+      color: white;
+    }
+
+  }
+
+  .pagination {
+    button {
+      margin: 0 5px;
+      width: 125px;
+      height: 40px;
+      cursor: pointer;
+      border-radius: 5px;
+      border: 1.5px solid green;
+      background: transparent;
+      transition: background .15s, color .15s;
+      color: green;
+
+      &:hover {
+        background: green;
+        color: white;
+      }
+
+      &:active {
+        background: rgb(0, 100, 0);
+      }
+    }
+  }
+
+
 }

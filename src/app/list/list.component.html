@@ -1,9 +1,22 @@
 <div class="main-wrapper">
-  <div *ngFor="let item of planetsList" fxLayout="row" fxLayoutGap="10px">
-     <div>{{item.name}}</div>
-     <div>{{item.climate}}</div>
-     <div>{{item.terrain}}</div>
-     <div>{{item.diameter}}</div>
-     <div>{{item.gravity}}</div>
+  <table class="table">
+    <tr>
+      <th>Name</th>
+      <th>Climate</th>
+      <th>Terrain</th>
+      <th>Diameter</th>
+      <th>Gravity</th>
+    </tr>
+    <tr *ngFor="let item of planetsList">
+      <td>{{item.name}}</td>
+      <td>{{item.climate}}</td>
+      <td>{{item.terrain}}</td>
+      <td>{{item.diameter}}</td>
+      <td>{{item.gravity}}</td>
+    </tr>
+  </table>
+  <div class="pagination">
+    <button *ngIf="previous" class="pagination__previous" (click)="changePage('previous')">Previous page</button>
+    <button *ngIf="next" class="pagination__next" (click)="changePage('next')">Next page</button>
   </div>
 </div>
